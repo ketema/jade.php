@@ -1,10 +1,10 @@
 <?php
 
-use Everzet\Jade\Jade;
-use Everzet\Jade\Parser;
-use Everzet\Jade\Lexer\Lexer;
-use Everzet\Jade\Dumper\PHPDumper;
-use Everzet\Jade\Visitor\AutotagsVisitor;
+use jade\Everzet\Jade\Jade;
+use jade\Everzet\Jade\Parser;
+use jade\Everzet\Jade\Lexer\Lexer;
+use jade\Everzet\Jade\Dumper\PHPDumper;
+use jade\Everzet\Jade\Visitor\AutotagsVisitor;
 
 /*
  * This file is part of the Jade.php.
@@ -57,7 +57,7 @@ class JadeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals("<p>\n  'foo'\n</p>", $this->parse("p\n  | 'foo'"));
         $this->assertEquals(<<<HTML
 <?php \$path = 'foo' ?>
-<a href="/<?php echo \$path ?>"></a>
+<a href="/<?php echo "\$path"; ?>"></a>
 HTML
 , $this->parse(<<<Jade
 - \$path = 'foo'
@@ -347,10 +347,10 @@ HTML;
     
     public function testCodeAttrs()
     {
-        $this->assertEquals('<p id="<?php echo $name ?>"></p>', $this->parse('p(id: {{$name}})'));
-        $this->assertEquals('<p id="<?php echo \'name \' . $name . " =)" ?>"></p>', $this->parse('p(id: {{\'name \' . $name . " =)"}})'));
-        $this->assertEquals('<p foo="<?php echo $name || "<default />" ?>"></p>', $this->parse('p(foo: {{$name || "<default />"}})'));
-        $this->assertEquals('<p id="<?php echo \'name \' . $name . " =)" ?>">Hello, (bracket =) )</p>', $this->parse('p(id: {{\'name \' . $name . " =)"}}) Hello, (bracket =) )'));
+        $this->assertEquals('<p id="<?php echo "$name"; ?>"></p>', $this->parse('p(id: {{$name}})'));
+        $this->assertEquals('<p id="<?php echo "\'name \' . $name . " =)""; ?>"></p>', $this->parse('p(id: {{\'name \' . $name . " =)"}})'));
+        $this->assertEquals('<p foo="<?php echo "$name || "<default />""; ?>"></p>', $this->parse('p(foo: {{$name || "<default />"}})'));
+        $this->assertEquals('<p id="<?php echo "\'name \' . $name . " =)""; ?>">Hello, (bracket =) )</p>', $this->parse('p(id: {{\'name \' . $name . " =)"}}) Hello, (bracket =) )'));
     }
     
     public function testCode()
