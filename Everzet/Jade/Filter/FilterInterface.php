@@ -1,6 +1,6 @@
 <?php
 
-namespace Everzet\Jade\Filter;
+namespace jade\Everzet\Jade\Filter;
 
 /*
  * This file is part of the Jade.php.
@@ -11,9 +11,9 @@ namespace Everzet\Jade\Filter;
  */
 
 /**
- * JavaScript script tag filter. 
+ * Filter Interface. 
  */
-class JavaScriptFilter implements FilterInterface
+interface FilterInterface
 {
     /**
      * Filter text. 
@@ -24,12 +24,5 @@ class JavaScriptFilter implements FilterInterface
      *
      * @return  string              filtered text
      */
-    public function filter($text, array $attributes, $indent)
-    {
-        $html  = $indent . '<script type="text/javascript">' . "\n";
-        $html .= $text;
-        $html .= "\n" . $indent . '</script>';
-
-        return $html;
-    }
+    public function filter($text, array $attributes, $indent);
 }

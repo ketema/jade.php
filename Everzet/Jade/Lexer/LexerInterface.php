@@ -1,6 +1,6 @@
 <?php
 
-namespace Everzet\Jade\Lexer;
+namespace jade\Everzet\Jade\Lexer;
 
 /*
  * This file is part of the Jade.php.

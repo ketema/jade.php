@@ -1,9 +1,9 @@
 <?php
 
-namespace Everzet\Jade\Dumper;
+namespace jade\Everzet\Jade\Dumper;
 
-use Everzet\Jade\Visitor\VisitorInterface;
-use Everzet\Jade\Node\BlockNode;
+use jade\Everzet\Jade\Visitor\VisitorInterface;
+use jade\Everzet\Jade\Node\BlockNode;
 
 /*
  * This file is part of the Jade.php.

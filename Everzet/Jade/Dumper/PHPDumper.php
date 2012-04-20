@@ -1,20 +1,20 @@
 <?php
 
-namespace Everzet\Jade\Dumper;
+namespace jade\Everzet\Jade\Dumper;
 
-use Everzet\Jade\Exception\Exception;
+use jade\Everzet\Jade\Exception\Exception;
 
-use Everzet\Jade\Visitor\VisitorInterface;
-use Everzet\Jade\Filter\FilterInterface;
+use jade\Everzet\Jade\Visitor\VisitorInterface;
+use jade\Everzet\Jade\Filter\FilterInterface;
 
-use Everzet\Jade\Node\Node;
-use Everzet\Jade\Node\BlockNode;
-use Everzet\Jade\Node\DoctypeNode;
-use Everzet\Jade\Node\TagNode;
-use Everzet\Jade\Node\TextNode;
-use Everzet\Jade\Node\FilterNode;
-use Everzet\Jade\Node\CommentNode;
-use Everzet\Jade\Node\CodeNode;
+use jade\Everzet\Jade\Node\Node;
+use jade\Everzet\Jade\Node\BlockNode;
+use jade\Everzet\Jade\Node\DoctypeNode;
+use jade\Everzet\Jade\Node\TagNode;
+use jade\Everzet\Jade\Node\TextNode;
+use jade\Everzet\Jade\Node\FilterNode;
+use jade\Everzet\Jade\Node\CommentNode;
+use jade\Everzet\Jade\Node\CodeNode;
 
 /*
  * This file is part of the Jade.php.

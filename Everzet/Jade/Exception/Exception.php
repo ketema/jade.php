@@ -1,8 +1,6 @@
 <?php
 
-namespace Everzet\Jade\Visitor;
-
-use Everzet\Jade\Node\Node;
+namespace jade\Everzet\Jade\Exception;
 
 /*
  * This file is part of the Jade.php.
@@ -13,14 +11,8 @@ use Everzet\Jade\Node\Node;
  */
 
 /**
- * Node Visitor Interface. 
+ * Jade exception. 
  */
-interface VisitorInterface
+class Exception extends \Exception
 {
-    /**
-     * Visit node. 
-     * 
-     * @param   Node    $node   node to visit
-     */
-    public function visit(Node $node);
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace Everzet\Jade;
+namespace jade\Everzet\Jade;
 
-use Everzet\Jade\Exception\Exception;
-use Everzet\Jade\Lexer\LexerInterface;
-use Everzet\Jade\Dumper\DumperInterface;
+use jade\Everzet\Jade\Exception\Exception;
+use jade\Everzet\Jade\Lexer\LexerInterface;
+use jade\Everzet\Jade\Dumper\DumperInterface;
 
 /*
  * This file is part of the Jade.php.
@@ -15,7 +15,7 @@ use Everzet\Jade\Dumper\DumperInterface;
  */
 
 /**
- * Jade. 
+ * Jade.
  */
 class Jade
 {
@@ -24,8 +24,8 @@ class Jade
     protected $cache;
 
     /**
-     * Initialize parser. 
-     * 
+     * Initialize parser.
+     *
      * @param   LexerInterface  $lexer  jade lexer
      */
     public function __construct(Parser $parser, DumperInterface $dumper, $cache = null)
@@ -36,8 +36,8 @@ class Jade
     }
 
     /**
-     * Render provided input to dumped string. 
-     * 
+     * Render provided input to dumped string.
+     *
      * @param   string  $input  input string or file path
      *
      * @return  string          dumped string
@@ -52,7 +52,7 @@ class Jade
 
     /**
      * Get current fresh cache path or render & dump input to new cache & return it's path.
-     * 
+     *
      * @param   string  $input  input string or file path
      *
      * @return  string          cache path
@@ -80,8 +80,8 @@ class Jade
     }
 
     /**
-     * Return source from input (Jade template). 
-     * 
+     * Return source from input (Jade template).
+     *
      * @param   string  $input  input string or file path
      *
      * @return  string
@@ -96,8 +96,8 @@ class Jade
     }
 
     /**
-     * Return caching key for input. 
-     * 
+     * Return caching key for input.
+     *
      * @param   string  $input  input string or file path
      *
      * @return  string
@@ -112,8 +112,8 @@ class Jade
     }
 
     /**
-     * Return full cache path for specified cache key. 
-     * 
+     * Return full cache path for specified cache key.
+     *
      * @param   string  $cacheKey   cache key
      *
      * @return  string              absolute path
@@ -124,8 +124,8 @@ class Jade
     }
 
     /**
-     * Return cache time creation. 
-     * 
+     * Return cache time creation.
+     *
      * @param   string  $cacheKey   cache key
      *
      * @return  integer             UNIX timestamp (filemtime used)
@@ -142,8 +142,8 @@ class Jade
     }
 
     /**
-     * Return true if cache, created at specified time is fresh enough for provided input. 
-     * 
+     * Return true if cache, created at specified time is fresh enough for provided input.
+     *
      * @param   string  $input      input string or file
      * @param   srting  $cacheTime  cache key
      *
@@ -159,8 +159,8 @@ class Jade
     }
 
     /**
-     * Cache rendered input at provided key. 
-     * 
+     * Cache rendered input at provided key.
+     *
      * @param   string  $cacheKey   new cache key
      * @param   string  $rendered   rendered input
      *

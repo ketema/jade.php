@@ -1,6 +1,6 @@
 <?php
 
-namespace Everzet\Jade\Filter;
+namespace jade\Everzet\Jade\Filter;
 
 /*
  * This file is part of the Jade.php.
@@ -11,9 +11,9 @@ namespace Everzet\Jade\Filter;
  */
 
 /**
- * CSS style tag filter. 
+ * CDATA filter. 
  */
-class CSSFilter implements FilterInterface
+class CDATAFilter implements FilterInterface
 {
     /**
      * Filter text. 
@@ -26,9 +26,9 @@ class CSSFilter implements FilterInterface
      */
     public function filter($text, array $attributes, $indent)
     {
-        $html  = $indent . '<style type="text/css">' . "\n";
+        $html  = $indent . '<![CDATA[' . "\n";
         $html .= $text;
-        $html .= "\n" . $indent . '</style>';
+        $html .= "\n" . $indent . ']]>';
 
         return $html;
     }
