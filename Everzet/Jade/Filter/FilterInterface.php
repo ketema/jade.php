@@ -1,6 +1,6 @@
 <?php
 
-namespace Everzet\Jade\Filter;
+namespace jade\Everzet\Jade\Filter;
 
 /*
  * This file is part of the Jade.php.

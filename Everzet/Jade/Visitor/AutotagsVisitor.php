@@ -1,9 +1,9 @@
 <?php
 
-namespace Everzet\Jade\Visitor;
+namespace jade\Everzet\Jade\Visitor;
 
-use Everzet\Jade\Node\Node;
-use Everzet\Jade\Node\TagNode;
+use jade\Everzet\Jade\Node\Node;
+use jade\Everzet\Jade\Node\TagNode;
 
 /*
  * This file is part of the Jade.php.

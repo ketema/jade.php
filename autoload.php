@@ -12,5 +12,5 @@ require_once __DIR__.'/vendor/symfony/src/Symfony/Framework/UniversalClassLoader
 use Symfony\Framework\UniversalClassLoader;
 
 $loader = new UniversalClassLoader();
-$loader->registerNamespaces(array('Everzet' => __DIR__));
+$loader->registerNamespaces(array('jade' => __DIR__));
 $loader->register();

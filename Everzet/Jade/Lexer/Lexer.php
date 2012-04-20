@@ -1,8 +1,8 @@
 <?php
 
-namespace Everzet\Jade\Lexer;
+namespace jade\Everzet\Jade\Lexer;
 
-use Everzet\Jade\Exception\Exception;
+use jade\Everzet\Jade\Exception\Exception;
 
 /*
  * This file is part of the Jade.php.

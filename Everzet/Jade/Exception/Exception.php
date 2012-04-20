@@ -1,6 +1,6 @@
 <?php
 
-namespace Everzet\Jade\Exception;
+namespace jade\Everzet\Jade\Exception;
 
 /*
  * This file is part of the Jade.php.

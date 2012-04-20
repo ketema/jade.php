@@ -1,6 +1,6 @@
 <?php
 
-namespace Everzet\Jade\Node;
+namespace jade\Everzet\Jade\Node;
 
 /*
  * This file is part of the Jade.php.
