@@ -1,15 +1,15 @@
 <?php
 
-use Everzet\Jade\Jade;
-use Everzet\Jade\Parser;
-use Everzet\Jade\Lexer\Lexer;
-use Everzet\Jade\Dumper\PHPDumper;
-use Everzet\Jade\Visitor\AutotagsVisitor;
+use jade\Everzet\Jade\Jade;
+use jade\Everzet\Jade\Parser;
+use jade\Everzet\Jade\Lexer\Lexer;
+use jade\Everzet\Jade\Dumper\PHPDumper;
+use jade\Everzet\Jade\Visitor\AutotagsVisitor;
 
-use Everzet\Jade\Filter\JavaScriptFilter;
-use Everzet\Jade\Filter\CDATAFilter;
-use Everzet\Jade\Filter\PHPFilter;
-use Everzet\Jade\Filter\CSSFilter;
+use jade\Everzet\Jade\Filter\JavaScriptFilter;
+use jade\Everzet\Jade\Filter\CDATAFilter;
+use jade\Everzet\Jade\Filter\PHPFilter;
+use jade\Everzet\Jade\Filter\CSSFilter;
 
 /*
  * This file is part of the Jade.php.
@@ -47,7 +47,7 @@ class FiltersTest extends \PHPUnit_Framework_TestCase
     public function testFilterCodeInsertion()
     {
         $this->assertEquals(
-            "<script type=\"text/javascript\">\n  var name = \"<?php echo \$name ?>\";\n</script>",
+            "<script type=\"text/javascript\">\n  var name = \"<?php echo \"\$name\"; ?>\";\n</script>",
             $this->parse(<<<Jade
 :javascript
   | var name = "{{\$name}}";
