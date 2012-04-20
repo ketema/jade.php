@@ -57,7 +57,7 @@ class JadeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals("<p>\n  'foo'\n</p>", $this->parse("p\n  | 'foo'"));
         $this->assertEquals(<<<HTML
 <?php \$path = 'foo' ?>
-<a href="/<?php echo "\$path"; ?>"></a>
+<a href="/<?php echo \$path; ?>"></a>
 HTML
 , $this->parse(<<<Jade
 - \$path = 'foo'
@@ -347,10 +347,10 @@ HTML;
     
     public function testCodeAttrs()
     {
-        $this->assertEquals('<p id="<?php echo "$name"; ?>"></p>', $this->parse('p(id: {{$name}})'));
-        $this->assertEquals('<p id="<?php echo "\'name \' . $name . " =)""; ?>"></p>', $this->parse('p(id: {{\'name \' . $name . " =)"}})'));
-        $this->assertEquals('<p foo="<?php echo "$name || "<default />""; ?>"></p>', $this->parse('p(foo: {{$name || "<default />"}})'));
-        $this->assertEquals('<p id="<?php echo "\'name \' . $name . " =)""; ?>">Hello, (bracket =) )</p>', $this->parse('p(id: {{\'name \' . $name . " =)"}}) Hello, (bracket =) )'));
+        $this->assertEquals('<p id="<?php echo $name; ?>"></p>', $this->parse('p(id: {{$name}})'));
+        $this->assertEquals('<p id="<?php echo \'name \' . $name . " =)"; ?>"></p>', $this->parse('p(id: {{\'name \' . $name . " =)"}})'));
+        $this->assertEquals('<p foo="<?php echo $name || "<default />"; ?>"></p>', $this->parse('p(foo: {{$name || "<default />"}})'));
+        $this->assertEquals('<p id="<?php echo \'name \' . $name . " =)"; ?>">Hello, (bracket =) )</p>', $this->parse('p(id: {{\'name \' . $name . " =)"}}) Hello, (bracket =) )'));
     }
     
     public function testCode()

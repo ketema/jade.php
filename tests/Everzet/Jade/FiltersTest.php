@@ -47,7 +47,7 @@ class FiltersTest extends \PHPUnit_Framework_TestCase
     public function testFilterCodeInsertion()
     {
         $this->assertEquals(
-            "<script type=\"text/javascript\">\n  var name = \"<?php echo \"\$name\"; ?>\";\n</script>",
+            "<script type=\"text/javascript\">\n  var name = \"<?php echo \$name; ?>\";\n</script>",
             $this->parse(<<<Jade
 :javascript
   | var name = "{{\$name}}";
